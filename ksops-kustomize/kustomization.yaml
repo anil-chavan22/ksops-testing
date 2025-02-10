@@ -1,0 +1,9 @@
+resources:
+  - secret_encrypted.yaml
+
+secretGenerator:
+  - name: my-secret
+    behavior: merge
+    files:
+      - password=secret_encrypted.yaml
+
